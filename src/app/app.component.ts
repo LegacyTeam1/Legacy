@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CategoryComponent } from './category/category.component';
+
 
 
 @Component({
@@ -8,6 +8,7 @@ import { CategoryComponent } from './category/category.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular11-tailwindcss';
-  
+
+  title = 'FreeMarket';
+
 }
