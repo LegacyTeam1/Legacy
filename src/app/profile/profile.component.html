@@ -22,32 +22,30 @@
     <!-- component -->
     <div class="leading-loose">
       <form class="max-w-sm m-4 p-10 bg-white bg-opacity-25 rounded shadow-xl">
-        <p class="text-gray-800 font-medium">Customer information</p>
+        <p class="text-gray-800 font-medium">Product information</p>
         <div class="">
-          <label class="block text-sm text-gray-00" for="cus_name">Name</label>
+          <label class="block text-sm text-gray-00" for="cus_name"></label>
           <input
             class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded"
             id="cus_name"
             name="cus_name"
             type="text"
             required=""
-            placeholder="Your Name"
+            placeholder="Product Name"
             aria-label="Name"
           />
         </div>
         <div class="mt-2">
-          <label class="block text-sm text-gray-600" for="cus_email"
-            >Email</label
+          <label for="cars">Category</label>
+          <select
+            name="cars"
+            id="cars"
+            class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded"
           >
-          <input
-            class="w-full px-5 py-4 text-gray-700 bg-gray-200 rounded"
-            id="cus_email"
-            name="cus_email"
-            type="text"
-            required=""
-            placeholder="Your Email"
-            aria-label="Email"
-          />
+            <option value="Houses">Houses</option>
+            <option value="Cars">Cars</option>
+            <option value="phones">Phones</option>
+          </select>
         </div>
         <div class="mt-2">
           <label class="block text-sm text-gray-600" for="cus_email"
@@ -77,33 +75,32 @@
             aria-label="Email"
           />
         </div>
-        <div class="inline-block mt-2 w-1/2 pr-1">
-          <label class="hidden block text-sm text-gray-600" for="cus_email"
-            >Country</label
+        <!-- component -->
+        <div class="flex flex-col">
+          <label
+            for="price"
+            class="mt-4 mb-1 uppercase text-grey-darker text-xs font-bold"
+            >Price</label
           >
-          <input
-            class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded"
-            id="cus_email"
-            name="cus_email"
-            type="text"
-            required=""
-            placeholder="Country"
-            aria-label="Email"
-          />
-        </div>
-        <div class="inline-block mt-2 -mx-1 pl-1 w-1/2">
-          <label class="hidden block text-sm text-gray-600" for="cus_email"
-            >Zip</label
-          >
-          <input
-            class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded"
-            id="cus_email"
-            name="cus_email"
-            type="text"
-            required=""
-            placeholder="Zip"
-            aria-label="Email"
-          />
+          <div class="flex flex-row">
+            <span
+              class="
+                flex
+                items-center
+                bg-grey-lighter
+                rounded rounded-r-none
+                px-3
+                font-bold
+                text-grey-darker
+              "
+              >$</span
+            >
+            <input
+              type="number"
+              name="price"
+              class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded"
+            />
+          </div>
         </div>
       </form>
     </div>
@@ -320,9 +317,9 @@
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Forest</div>
           <p class="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-            quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-            nihil.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Voluptatibus quia, nulla! Maiores et perferendis eaque,
+            exercitationem praesentium nihil.
           </p>
         </div>
         <div class="px-6 pt-4 pb-2">
@@ -372,68 +369,71 @@
             >#fall</span
           >
         </div>
-                 <div class="transform hover:scale-110 rounded overflow-hidden shadow-lg">
-                <img
-                  class="w-full"
-                  src="https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/styles/featured_media_detail/public/news/featured_media/48835889383_c5959fd02c_o.jpg?X1tupMMwIIblrefeeWgXSO43YI0TsDZ9&itok=x5usRWQ9"
-                  alt="Forest"
-                />
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl mb-2">Forest</div>
-                  <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-                    quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-                    nihil.
-                  </p>
-                </div>
-                <div class="px-6 pt-4 pb-2">
-                  <span
-                    class="
-                      inline-block
-                      bg-gray-200
-                      rounded-full
-                      px-3
-                      py-1
-                      text-sm
-                      font-semibold
-                      text-gray-700
-                      mr-2
-                      mb-2
-                    "
-                    >#photography</span
-                  >
-                  <span
-                    class="
-                      inline-block
-                      bg-gray-200
-                      rounded-full
-                      px-3
-                      py-1
-                      text-sm
-                      font-semibold
-                      text-gray-700
-                      mr-2
-                      mb-2
-                    "
-                    >#travel</span
-                  >
-                  <span
-                    class="
-                      inline-block
-                      bg-gray-200
-                      rounded-full
-                      px-3
-                      py-1
-                      text-sm
-                      font-semibold
-                      text-gray-700
-                      mr-2
-                      mb-2
-                    "
-                    >#fall</span
-                  >
-                </div>
+        <div
+          class="transform hover:scale-110 rounded overflow-hidden shadow-lg"
+        >
+          <img
+            class="w-full"
+            src="https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/styles/featured_media_detail/public/news/featured_media/48835889383_c5959fd02c_o.jpg?X1tupMMwIIblrefeeWgXSO43YI0TsDZ9&itok=x5usRWQ9"
+            alt="Forest"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Forest</div>
+            <p class="text-gray-700 text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus quia, nulla! Maiores et perferendis eaque,
+              exercitationem praesentium nihil.
+            </p>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <span
+              class="
+                inline-block
+                bg-gray-200
+                rounded-full
+                px-3
+                py-1
+                text-sm
+                font-semibold
+                text-gray-700
+                mr-2
+                mb-2
+              "
+              >#photography</span
+            >
+            <span
+              class="
+                inline-block
+                bg-gray-200
+                rounded-full
+                px-3
+                py-1
+                text-sm
+                font-semibold
+                text-gray-700
+                mr-2
+                mb-2
+              "
+              >#travel</span
+            >
+            <span
+              class="
+                inline-block
+                bg-gray-200
+                rounded-full
+                px-3
+                py-1
+                text-sm
+                font-semibold
+                text-gray-700
+                mr-2
+                mb-2
+              "
+              >#fall</span
+            >
+          </div>
+        </div>
+      </div>
     </div>
-    
-  
+  </section>
 </div>
