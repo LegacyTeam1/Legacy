@@ -101,6 +101,37 @@
           }
         }
       }
+    },
+    "mockname": {
+      "projectType": "library",
+      "root": "projects/mockname",
+      "sourceRoot": "projects/mockname/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mockname/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mockname/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mockname/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mockname/src/test.ts",
+            "tsConfig": "projects/mockname/tsconfig.spec.json",
+            "karmaConfig": "projects/mockname/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular11-tailwindcss"

@@ -1,3 +1,6 @@
+
+
+
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
@@ -10,17 +13,27 @@ import { FormsModule } from "@angular/forms";
 import { CardsComponent } from "./cards/cards.component";
 import { CategoryComponent } from "./category/category.component";
 
+
+
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+
     NavBarComponent,
     SidebarComponent,
     InputformComponent,
     CardsComponent,
     CategoryComponent,
+
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
+
 })
 export class AppModule {}
