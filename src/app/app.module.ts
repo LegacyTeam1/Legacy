@@ -1,7 +1,4 @@
 
-
-
-
 import { RouterModule } from '@angular/router';
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
@@ -16,6 +13,7 @@ import { HousesComponent } from './houses/houses.component';
 import { CarsComponent } from './cars/cars.component';
 
 
+
 @NgModule({
 
   declarations: [
@@ -23,7 +21,8 @@ import { CarsComponent } from './cars/cars.component';
     ProfileComponent,
     PhonesComponent,
     HousesComponent,
-    CarsComponent
+    CarsComponent,
+  
 
   ],
   imports: [

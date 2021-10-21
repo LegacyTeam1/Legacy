@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./join.component.scss']
 })
 export class JoinComponent implements OnInit {
-
+  isLoginMode= true;
   constructor() { }
 
   ngOnInit(): void {
