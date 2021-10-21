@@ -1,8 +1,12 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { CarsComponent } from "./cars/cars.component";
+import { HousesComponent } from "./houses/houses.component";
 import { LoginComponent } from "./login/login.component";
+import { PhonesComponent } from "./phones/phones.component";
+import { ProfileComponent } from "./profile/profile.component";
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: "login",
     loadChildren: () =>
@@ -17,25 +21,16 @@ const routes: Routes = [
     loadChildren: () =>
       import("./main-ui/main-ui.module").then((m) => m.MainUIModule),
   },
-  {
-    path: "cars",
-    loadChildren: () => import("./cars/cars.module").then((m) => m.CarsModule),
-  },
-  {
-    path: "phones",
-    loadChildren: () =>
-      import("./phones/phones.module").then((m) => m.PhonesModule),
-  },
-  {
-    path: "houses",
-    loadChildren: () =>
-      import("./houses/houses.module").then((m) => m.HousesModule),
-  },
-  {
-    path: "profile",
-    loadChildren: () =>
-      import("./profile/profile.module").then((m) => m.ProfileModule),
-  },
+  { path: 'cars', component: CarsComponent }
+   ,
+  { path: 'houses', component: HousesComponent },
+  { path: 'phones', component: PhonesComponent },
+  // {
+  //   path: "profile",
+  //   loadChildren: () =>
+  //     import("./profile/profile.module").then((m) => m.ProfileModule),
+  // },
+  { path: 'profile', component: ProfileComponent }
 ];
 
 @NgModule({
@@ -43,4 +38,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-export const routingComponent = { LoginComponent };
+// export const routingComponent = { LoginComponent };
