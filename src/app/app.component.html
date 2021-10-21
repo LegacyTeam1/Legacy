@@ -1,7 +1,9 @@
 <div class='app ' >
 <nav class="flex justify-between bg-gray-900 text-white max-w-full">
   <div class="px-5 xl:px-12 py-6 flex w-full items-center">
-    <a class="text-3xl font-bold font-heading flex flex-auto ml-12" href="#">
+    <a 
+    routerLink="/mainUI"
+    class="text-3xl font-bold font-heading flex flex-auto ml-12" href="#">
       <img
         class="h-9 absolute -ml-12 bg-red-500"
         src="http://cdn.onlinewebfonts.com/svg/img_93607.png"
@@ -13,9 +15,11 @@
     <ul
       class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-8 mr-24"
     >
-      <li><a class="hover:text-gray-200" href="#">Home</a></li>
-      <li><a class="hover:text-gray-200" href="#">Contact Us</a></li>
-      <li><a class="hover:text-gray-200" href="#">Join</a></li>
+      <li><a         routerLink="/mainUI"
+        class="hover:text-gray-200" href="#">Home</a></li>
+      <li><a  class="hover:text-gray-200" href="#">Contact Us</a></li>
+      <li><a         routerLink="/join"
+         class="hover:text-gray-200" href="#">Join</a></li>
     </ul>
     <!-- Header Icons -->
     <div class="hidden xl:flex items-center space-x-5 items-center">
@@ -68,7 +72,7 @@
         </span>
       </a>
       <!-- Sign In / Register      -->
-      <a class="flex items-center hover:text-gray-200" href="#">
+      <a   routerLink="/login" class="flex items-center hover:text-gray-200" href="#">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6 hover:text-gray-200"
@@ -119,7 +123,8 @@
       </span>
     </span>
   </a>
-  <a class="navbar-burger self-center mr-12 xl:hidden" href="#">
+  <a       
+   class="navbar-burger self-center mr-12 xl:hidden" href="#">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="h-6 w-6 hover:text-gray-200"
