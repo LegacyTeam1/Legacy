@@ -1,24 +1,26 @@
 <!-- component -->
+<div class="h-screen font-sans login bg-cover">
 <script
   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js"
   defer
 ></script>
-<div class="min-h-screen max-h-screen justify-center  login">
-  <div class="container max-w-full mx-auto md: px-6 ">
+
+<div class="join">
+  <div class="container mx-auto h-full flex flex-1 justify-center items-center">
     <div class="max-w-sm mx-auto px-6">
       <div class="relative flex flex-wrap">
         <div class="w-full relative">
           <div class="md:mt-6">
-            <div class="text-center font-semibold text-black">
-              Welcome to our freeMarket
+            <div class="text-center font-extrabold text-black -my-6">
+              Welcome To Our FreeMarket
             </div>
-            <div class="text-center font-base text-black">
-              Nice to meet you please fill your information
+            <div class="text-center font-base font-semibold text-black my-4">
+              Nice To meet You Please Fill Your Information
             </div>
             <form class="max-w-sm m-4 p-10 bg-red-900 bg-opacity-75 rounded shadow-xl" x-data="{password: '',password_confirm: ''}">
               <div class=" max-w-lg">
                 <div class="py-1">
-                  <span class="px-1 text-sm text-gray-600">Username</span>
+                  <span class="px-1 text-sm text-white">Username</span>
                   <input
                     placeholder=""
                     type="text"
@@ -41,7 +43,7 @@
                   />
                 </div>
                 <div class="py-1">
-                  <span class="px-1 text-sm text-gray-600">Email</span>
+                  <span class="px-1 text-sm text-white">Email</span>
                   <input
                     placeholder=""
                     type="email"
@@ -64,7 +66,7 @@
                   />
                 </div>
                 <div class="py-1">
-                  <span class="px-1 text-sm text-gray-600">Password</span>
+                  <span class="px-1 text-sm text-white">Password</span>
                   <input
                     placeholder=""
                     type="password"
@@ -88,7 +90,7 @@
                   />
                 </div>
                 <div class="py-1">
-                  <span class="px-1 text-sm text-gray-600"
+                  <span class="px-1 text-sm text-white"
                     >Password Confirm</span
                   >
                   <input
@@ -119,19 +121,19 @@
                 </div>
                 <div class="flex justify-start">
                   <label
-                    class="block text-gray-500 font-bold my-4 flex items-center"
+                    class="block text-white font-bold my-4 flex items-center"
                   >
                     <input
                       class="leading-loose text-pink-600 top-0"
                       type="checkbox"
                     />
-                    <span class="ml-2 text-sm py-2 text-gray-600 text-left"
+                    <span class="ml-2 text-sm py-2 text-white text-left"
                       >Accept the
                       <a
                         href="#"
                         class="
                           font-semibold
-                          text-black
+                          text-white
                           border-b-2 border-gray-200
                           hover:border-gray-500
                         "
@@ -142,7 +144,7 @@
                         href="#"
                         class="
                           font-semibold
-                          text-black
+                          text-white
                           border-b-2 border-gray-200
                           hover:border-gray-500
                         "
@@ -204,3 +206,4 @@
 
 </div>
 
+</div>
