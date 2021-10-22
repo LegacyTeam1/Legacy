@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { CarsComponent } from "./cars/cars.component";
 import { HousesComponent } from "./houses/houses.component";
@@ -9,13 +10,13 @@ import { PhonesComponent } from "./phones/phones.component";
 import { ProfileComponent } from "./profile/profile.component";
 
 export const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'join', component: JoinComponent },
-  { path: 'mainUI', component: MainUIComponent },
-  { path: 'cars', component: CarsComponent } ,
-  { path: 'houses', component: HousesComponent },
-  { path: 'phones', component: PhonesComponent },
-  { path: 'profile', component: ProfileComponent }
+  { path: "login", component: LoginComponent },
+  { path: "join", component: JoinComponent },
+  { path: "mainUI", component: MainUIComponent },
+  { path: "cars", component: CarsComponent },
+  { path: "houses", component: HousesComponent },
+  { path: "phones", component: PhonesComponent },
+  { path: "profile", component: ProfileComponent },
 ];
 
 @NgModule({
