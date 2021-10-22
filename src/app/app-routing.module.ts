@@ -6,6 +6,7 @@ import { CarsComponent } from "./cars/cars.component";
 import { HousesComponent } from "./houses/houses.component";
 import { JoinComponent } from "./join/join.component";
 import { LoginComponent } from "./login/login.component";
+import { MainUIComponent } from "./main-ui/main-ui.component";
 import { PhonesComponent } from "./phones/phones.component";
 import { ProfileComponent } from "./profile/profile.component";
 
