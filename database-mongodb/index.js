@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
-const Uri = process.env.URI;
+require("dotenv").config();
+
+const Uri = process.env.ATLAS_URI;
 mongoose.connect(
   Uri,
   {
