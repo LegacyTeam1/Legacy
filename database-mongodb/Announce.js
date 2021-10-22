@@ -3,12 +3,12 @@ const db = require('./index.js');
 mongoose.Promise = global.Promise;
 
 const announceSchema = new mongoose.Schema({
-  username : String,
-  adress : {type :String , require : true},
-  phoneNumber : {type :Number , require : true},
-  price : {type :Number , require : true},
+  username : {type :String , require : true, unique:true},
+  address : {type :String , require : true, unique:true},
+  phoneNumber : {type :Number , require : true, unique:true},
+  price : {type :Number , require : true, unique:true},
   imageUrl : String,
-  category : string,
+  category : String,
 }, 
   {
     timestamps: true
