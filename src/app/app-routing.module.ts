@@ -1,4 +1,3 @@
-
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { CarsComponent } from "./cars/cars.component";
@@ -39,5 +38,4 @@ export const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
-
+// export const routingComponent = { LoginComponent };
