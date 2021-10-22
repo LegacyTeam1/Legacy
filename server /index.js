@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname + '../src'));
 
 
-app.use('/api/user',announceRouter)
+app.use('/',announceRouter)
 
 
  
@@ -23,26 +23,7 @@ const path = require('path')
 
 
 
-
-
-app.post('/api/user/image',upload.single('image'),async (req,res)=>{
-  try{
-    const result = await cloudinary.uploader.upload(req.file.path);
  
- let img = new ImageS ({
-   name : req.body.name,
-   avatar : result.secure_url,
-   cloudinary_id : result.public_id,
- })
-
-await img.save();
-
-res.send({imageUrl : result.secure_url})
-    } 
-  catch(err){
-console.log(err)
-    }
-})
 
 
 
