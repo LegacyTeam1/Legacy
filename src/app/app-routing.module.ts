@@ -11,13 +11,13 @@ import { PhonesComponent } from "./phones/phones.component";
 import { ProfileComponent } from "./profile/profile.component";
 
 export const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'join', component: JoinComponent },
-  { path: 'mainUI', component: MainUIComponent },
-  { path: 'cars', component: CarsComponent } ,
-  { path: 'houses', component: HousesComponent },
-  { path: 'phones', component: PhonesComponent },
-  { path: 'profile', component: ProfileComponent }
+  { path: "login", component: LoginComponent },
+  { path: "join", component: JoinComponent },
+  { path: "mainUI", component: MainUIComponent },
+  { path: "cars", component: CarsComponent },
+  { path: "houses", component: HousesComponent },
+  { path: "phones", component: PhonesComponent },
+  { path: "profile", component: ProfileComponent },
 ];
 
 @NgModule({
