@@ -20,3 +20,15 @@ export class UserLogin {
   ) {  }
 
 }
+
+
+export class UserJoin {
+
+  constructor(
+   public username : string,
+   public email : string,
+   public password: string,
+   public passwordConfirm : string,
+  ) {  }
+
+}

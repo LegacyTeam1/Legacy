@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UserJoin} from '../check'
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-join',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JoinComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http : HttpClient ) { }
+   
+  welcome = new UserJoin('','','','')
+  
+  onSubmit(){
+    this.http.post('server',this.welcome)
+  }
 
   ngOnInit(): void {
   }

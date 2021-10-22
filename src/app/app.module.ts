@@ -14,6 +14,7 @@ import { HousesComponent } from "./houses/houses.component";
 import { CarsComponent } from "./cars/cars.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { LoginComponent } from "./login/login.component";
+import { JoinComponent } from "./join/join.component";
 
 @NgModule({
 
@@ -22,7 +23,8 @@ import { LoginComponent } from "./login/login.component";
     PhonesComponent,
     HousesComponent,
     ProfileComponent,
-    LoginComponent
+    LoginComponent,
+    JoinComponent
 
   ],
   imports: [

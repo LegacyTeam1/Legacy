@@ -17,13 +17,16 @@
             <div class="text-center font-base font-semibold text-black my-4">
               Nice To meet You Please Fill Your Information
             </div>
-            <form class="max-w-sm m-4 p-10 bg-red-900 bg-opacity-75 rounded shadow-xl" x-data="{password: '',password_confirm: ''}">
+            <form class="max-w-sm m-4 p-10 bg-red-900 bg-opacity-75 rounded shadow-xl" x-data="{password: '',password_confirm: ''}" #heroForm="ngForm" >
               <div class=" max-w-lg">
                 <div class="py-1">
                   <span class="px-1 text-sm text-white">Username</span>
                   <input
                     placeholder=""
                     type="text"
+                    [(ngModel)]="welcome.username" 
+                    name = 'username'
+                    id = "username"
                     class="
                       text-md
                       block
@@ -47,6 +50,9 @@
                   <input
                     placeholder=""
                     type="email"
+                    [(ngModel)]="welcome.email" 
+                    id="email"
+                    name= "email"
                     class="
                       text-md
                       block
@@ -71,6 +77,9 @@
                     placeholder=""
                     type="password"
                     x-model="password"
+                    id="password"
+                    name= "password"
+                    [(ngModel)]="welcome.password"                    
                     class="
                       text-md
                       block
@@ -97,6 +106,9 @@
                     placeholder=""
                     type="password"
                     x-model="password_confirm"
+                    id="passwordConfirm"
+                    name= "passwordConfirm"
+                    [(ngModel)]="welcome.passwordConfirm"
                     class="
                       text-md
                       block
