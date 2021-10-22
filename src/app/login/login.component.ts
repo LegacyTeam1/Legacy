@@ -28,6 +28,9 @@ export class LoginComponent implements OnInit {
       this.roles = this.tokenStorage.getUser().roles;
     }
   }
+  
+  user = new UserLogin('','')
+  
 
   onSubmit(): void {
     const { username, password } = this.form;

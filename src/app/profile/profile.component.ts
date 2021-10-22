@@ -1,6 +1,8 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
-import { Annouce } from '../annouce';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Indata } from '../check';
+import { HttpClient } from "@angular/common/http";
+
+
 
 @Component({
   selector: 'app-profile',
@@ -8,18 +10,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  
-  category = ['houses','cars','phones']
-  
-  announce = new Annouce('kl','kl',this.category[0],12,152,'eldk');
-  
-  constructor(private router: Router) {}
-  
-  submitted = false;
 
-  onSubmit() { this.submitted = true; }
+   constructor(private http:HttpClient){}
 
+ 
+  data = new Indata('','','',0,0,'','');
   
+
+  onSubmit() { 
+    this.http.post('server',this.data) }
+
   ngOnInit(): void {
   }
 

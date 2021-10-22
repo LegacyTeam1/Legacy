@@ -2,7 +2,6 @@ import { TestBed } from 'projects/mockname/src/node_modules/@angular/core/testin
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
-
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({

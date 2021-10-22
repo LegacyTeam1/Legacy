@@ -2,9 +2,9 @@ import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../_services/auth.service";
 
 @Component({
-  selector: "app-join",
-  templateUrl: "./join.component.html",
-  styleUrls: ["./join.component.scss"],
+  selector: 'app-join',
+  templateUrl: './join.component.html',
+  styleUrls: ['./join.component.scss']
 })
 export class JoinComponent implements OnInit {
   form: any = {
@@ -35,4 +35,5 @@ export class JoinComponent implements OnInit {
       }
     );
   }
+
 }
