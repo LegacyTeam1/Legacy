@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
+import { Annouce } from '../annouce';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -6,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+  
+  category = ['houses','cars','phones']
+  
+  announce = new Annouce('kl','kl',this.category[0],12,152,'eldk');
+  
+  constructor(private router: Router) {}
+  
+  submitted = false;
 
-  constructor() { }
+  onSubmit() { this.submitted = true; }
 
+  
   ngOnInit(): void {
   }
 
