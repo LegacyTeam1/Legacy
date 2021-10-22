@@ -8,16 +8,7 @@ const upload = require("../database-mongodb/utils/multer");
 // const path = require('path')
 
 exports.createAnnounce = (req, res) => {
-    const anounce = new Announce({
-    username: req.body.username,
-    adress: req.body.adress,
-    phoneNumber: req.body.phoneNumber,
-    price: req.body.price,
-    imageUrl: req.body.imageUrl,
-    category: req.body.catgory,
-  });
-  anounce
-    .save()
-    .then((res) => console.log(res))
+  Announce.create(req.body)
+    .then((result) => res.send(result))
     .catch((err) => console.log(err));
 };
