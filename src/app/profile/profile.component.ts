@@ -16,7 +16,6 @@ export class ProfileComponent implements OnInit {
  
   data = new Indata('','','',0,0,'','');
   
-  submitted = false;
 
   onSubmit() { 
     this.http.post('server',this.data) }
