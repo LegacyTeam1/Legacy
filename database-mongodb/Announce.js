@@ -8,7 +8,7 @@ const announceSchema = new mongoose.Schema({
   phoneNumber : {type :Number , require : true},
   price : {type :Number , require : true},
   imageUrl : String,
-  category : string,
+  category : String,
 }, 
   {
     timestamps: true
