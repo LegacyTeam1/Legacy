@@ -1,9 +1,7 @@
 <!-- component -->
 
-<div class="grid grid-cols-5  grid-rows-2 h-full ">
-  
+<div class="grid grid-cols-5 grid-rows-2 h-full">
   <div class="col-start-2 col-end-5 row-start-1 row-end-3">
-    
     <section class="mx-auto px-4 sm:px-6 lg:px-4 py-12">
       <div class="w-full text-center pb-8">
         <svg
@@ -40,17 +38,14 @@
 
         <p class="text-black font-normal text-2xl">Featured Ads</p>
       </div>
-      <div class="w-full grid grid-cols-1 grid-cols-2 gap-6">
-        <div
-          *ngFor="let post of posts | async"
-          
-        >
+      <div class="w-full grid grid-cols-2 gap-6">
+        <div *ngFor="let post of posts | async">
           <div class="bg-white bg-opacity-25 rounded-lg p-6">
-<<<<<<< HEAD
-            <img class="w-full" src={{post.thumbnailUrl}} alt="Mountain" />
-=======
-            <img class="w-full max-h-60" src={{post.thumbnailUrl}} alt="Mountain" />
->>>>>>> 6d8a5d42959c1cc423a226b3d6a300025ee23490
+            <img
+              class="w-full max-h-60"
+              src="{{ post.thumbnailUrl }}"
+              alt="Mountain"
+            />
             <div>
               <p class="text-black leading-loose font-normal text-base">
                 {{ post.title }}
@@ -60,8 +55,5 @@
         </div>
       </div>
     </section>
-  
   </div>
-
 </div>
-

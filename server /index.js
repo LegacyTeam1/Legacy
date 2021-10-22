@@ -7,13 +7,13 @@ const cloudinary = require("../database-mongodb/utils/cloudinary");
 const app = express();
 const PORT = 5050;
 
-var announceRouter = require("./router");
+var Router = require("./router");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "../src"));
 
-app.use("/", announceRouter);
+app.use("/", Router);
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
