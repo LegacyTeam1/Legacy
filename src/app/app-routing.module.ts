@@ -1,46 +1,46 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
-
-const routes: Routes = [
+import { JoinComponent } from "./join/join.component";
+import { HousesComponent } from "./houses/houses.component";
+import { CarsComponent } from "./cars/cars.component";
+import { PhonesComponent } from "./phones/phones.component";
+import { ProfileComponent } from "./profile/profile.component";
+import { MainUIComponent } from "./main-ui/main-ui.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+export const routes: Routes = [
   {
     path: "login",
-    loadChildren: () =>
-      import("./login/login.module").then((m) => m.LoginModule),
-  },
-  {
-    path: "join",
-    loadChildren: () => import("./join/join.module").then((m) => m.JoinModule),
+    component: LoginComponent,
   },
   {
     path: "mainUI",
-    loadChildren: () =>
-      import("./main-ui/main-ui.module").then((m) => m.MainUIModule),
+    component: MainUIComponent,
   },
   {
-    path: "cars",
-    loadChildren: () => import("./cars/cars.module").then((m) => m.CarsModule),
+    path: "join",
+    component: JoinComponent,
   },
   {
     path: "phones",
-    loadChildren: () =>
-      import("./phones/phones.module").then((m) => m.PhonesModule),
+    component: PhonesComponent,
   },
   {
     path: "houses",
-    loadChildren: () =>
-      import("./houses/houses.module").then((m) => m.HousesModule),
+    component: HousesComponent,
+  },
+  {
+    path: "cars",
+    component: CarsComponent,
   },
   {
     path: "profile",
-    loadChildren: () =>
-      import("./profile/profile.module").then((m) => m.ProfileModule),
+    component: ProfileComponent,
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), FormsModule, ReactiveFormsModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-export const routingComponent = { LoginComponent };
