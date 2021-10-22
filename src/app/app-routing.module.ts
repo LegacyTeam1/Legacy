@@ -22,6 +22,8 @@ const routes: Routes = [
   { path: 'houses',  component: HousesComponent },
   { path: 'profile',  component: ProfileComponent }
   ,
+  {path: '', pathMatch:"full",     loadChildren: () =>
+  import("./main-ui/main-ui.module").then((m) => m.MainUIModule) }
 ];
 
 @NgModule({
