@@ -1,16 +1,15 @@
-import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-join",
-  templateUrl: "./join.component.html",
-  styleUrls: ["./join.component.scss"],
+  selector: 'app-join',
+  templateUrl: './join.component.html',
+  styleUrls: ['./join.component.scss']
 })
 export class JoinComponent implements OnInit {
-  form!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor() { }
+
   ngOnInit(): void {
-    this.form = this.formBuilder.group({ name: "", email: "", password: "" });
   }
+
 }
