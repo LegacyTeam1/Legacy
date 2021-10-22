@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoUri = 'mongodb://localhost/Announcements';
+const mongoUri = 'mongodb://localhost:27017/pokemon';
 
 mongoose.connect(mongoUri,{ 
   useNewUrlParser: true ,
