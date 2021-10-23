@@ -13,11 +13,15 @@ export class MainUIComponent implements OnInit {
 
   constructor(private authService: AuthService) {}
 
+  target = '' 
+
   
 
   ngOnInit(): void {
     this.getData()
   }
+
+
 
    getData(){
     this.authService.getAnnounces().subscribe(data => {

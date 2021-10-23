@@ -5,10 +5,11 @@ mongoose.Promise = global.Promise;
 
 const announceSchema = mongoose.Schema(
   {
-    username: { type: String, required: true, unique: true },
-    address: { type: String, required: true, unique: true },
-    phoneNumber: { type: Number, required: true, unique: true },
-    price: { type: Number, required: true, unique: true },
+    id: Number,
+    user: { type: String, required: true },
+    address: { type: String, required: true },
+    phoneNumber: { type: Number, required: true },
+    price: { type: Number, required: true },
     imageUrl: String,
     category: String,
   },
