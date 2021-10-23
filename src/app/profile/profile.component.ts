@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Indata } from '../check';
-import { HttpClient } from "@angular/common/http";
 
 import { CreateService } from '../_services/create.service';
 

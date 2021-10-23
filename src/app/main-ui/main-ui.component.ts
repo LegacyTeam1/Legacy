@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from "../_services/announce.service";
+import { announceService } from "../_services/announce.service";
 import {  Subject } from 'rxjs';
 
 
@@ -14,7 +14,7 @@ import {  Subject } from 'rxjs';
 export class MainUIComponent implements OnInit {
   private Search = new Subject<string>()
 
-  constructor(private authService: AuthService) {}
+  constructor(private announceService: announceService) {}
 
   target:any
   article:any 
@@ -29,9 +29,8 @@ export class MainUIComponent implements OnInit {
   }
 
    getData(){
-    this.authService.getAnnounces(this.target).subscribe(data => {
+    this.announceService.getAnnounces(this.target).subscribe(data => {
       this.article = data  
-      console.log(this.article.length)
      
     })  
    }

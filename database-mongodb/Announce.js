@@ -6,6 +6,7 @@ mongoose.Promise = global.Promise;
 const announceSchema = mongoose.Schema(
   {
     productInfo: String,
+    username:{type:String,unique:true},
     user: { type: String, required: true },
     address: { type: String, required: true },
     phoneNumber: { type: Number, required: true },
