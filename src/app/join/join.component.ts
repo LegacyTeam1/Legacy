@@ -23,7 +23,7 @@ export class JoinComponent implements OnInit {
 
   onSubmit(): void {
     const { username, email, password } = this.form;
-      console.log(this.form)
+    
     this.authService.register(username, email, password).subscribe(
       (data) => {
         console.log(data);
