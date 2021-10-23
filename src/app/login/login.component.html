@@ -99,14 +99,12 @@
 
  -->
 
-<div class="col-md-12">
-  <div class="card card-container">
-    <img
-      id="profile-img"
-      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-      class="profile-img-card"
-    />
-    <form
+<div class="h-screen font-sans login bg-cover">
+  <div class="card card-container mx-auto h-full flex flex-1 justify-center items-center">
+  <div class="w-full max-w-lg">
+    <div class="leading-loose">
+    <form 
+    class="max-w-sm m-4 p-10 bg-yellow-600 bg-opacity-75 rounded shadow-xl"
       *ngIf="!isLoggedIn"
       name="form"
       (ngSubmit)="f.form.valid && onSubmit()"
@@ -114,10 +112,10 @@
       novalidate
     >
       <div class="form-group">
-        <label for="email">email</label>
+        <label class="block text-sm text-white" for="email">email</label>
         <input
           type="email"
-          class="form-control"
+          class="form-control w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white"
           name="email"
           [(ngModel)]="form.email"
           required
@@ -132,10 +130,10 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="password">Password</label>
+        <label class="block  text-sm text-white" for="password">Password</label>
         <input
           type="password"
-          class="form-control"
+          class="form-control w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white"
           name="password"
           [(ngModel)]="form.password"
           required
@@ -154,7 +152,7 @@
         </div>
       </div>
       <div class="form-group">
-        <button class="btn btn-primary btn-block">Login</button>
+        <button class="px-4 py-1 text-white font-semibold tracking-wider bg-gray-800 hover:bg-gray-800 rounded">Login</button>
       </div>
       <div class="form-group">
         <div
@@ -166,7 +164,8 @@
         </div>
       </div>
     </form>
-
+  </div>
+</div>
     <div class="alert alert-success" *ngIf="isLoggedIn">
       Logged in as {{ roles }}.
     </div>
