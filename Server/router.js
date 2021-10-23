@@ -1,14 +1,19 @@
-var announceRouter = require("express").Router();
+
+var Router = require("express").Router();
 var Controller = require("./controllers");
 
+Router.route("/create").post(Controller.createAnnounce);
+Router.route("/signup").post(Controller.createUser);
+Router.route("/signin").post(Controller.loginUser);
 
-announceRouter.get('/',Controller.restieve)
-announceRouter.post('/create',Controller.createAnnounce)
+Router.get('/',Controller.restieve)
+Router.post('/create',Controller.createAnnounce)
 
-announceRouter.get('/:id',Controller.restieve)
-announceRouter.delete('/:id',Controller.deleteOne)
-announceRouter.put('/:id',Controller.updateOne)
+Router.get('/:id',Controller.restieve)
+Router.delete('/:id',Controller.deleteOne)
+Router.put('/:id',Controller.updateOne)
 
 
 
-module.exports = announceRouter ;
+
+module.exports = Router;

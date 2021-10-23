@@ -11,3 +11,24 @@ export class Indata {
   ) {  }
 
 }
+
+export class UserLogin {
+
+  constructor(
+   public email : string,
+   public password: string
+  ) {  }
+
+}
+
+
+export class UserJoin {
+
+  constructor(
+   public username : string,
+   public email : string,
+   public password: string,
+   public passwordConfirm : string,
+  ) {  }
+
+}
