@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Search} from '../main-ui/main-ui.component'
+
 
 
 @Component({

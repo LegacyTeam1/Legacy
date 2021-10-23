@@ -10,7 +10,6 @@ const upload = require("../database-mongodb/utils/multer");
 // const path = require('path')
 
 exports.createAnnounce = (req, res) => {
-  console.log(req.body);
   Announce.create(req.body)
     .then((result) => res.send(result))
     .catch((err) => console.log(err));
@@ -27,6 +26,20 @@ exports.restieve = (req, res) => {
       res.status(403).send("can Not retrieve!");
     });
 };
+
+
+exports.search = (req,res) => {
+   
+   Announce.find({})
+       .then((result) => {
+        var  condition = req.params.id    
+        var arr = result.filter(e=> {
+          return e.productInfo.includes(condition)
+        })
+        res.send(arr)
+       })
+}
+
 
 exports.restieveOne = (req, res) => {
   Announce.findOne({ _id: req.params.id })

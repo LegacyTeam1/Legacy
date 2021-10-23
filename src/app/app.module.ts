@@ -13,6 +13,7 @@ import { LoginComponent } from "./login/login.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { authInterceptorProviders } from "./_helpers/auth.interceptor";
 import { SearchComponent } from './search/search.component';
+import { MainUIComponent } from "./main-ui/main-ui.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { SearchComponent } from './search/search.component';
     JoinComponent,
     LoginComponent,
     SearchComponent,
+    MainUIComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 

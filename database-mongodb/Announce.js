@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 
 const announceSchema = mongoose.Schema(
   {
-    id: Number,
+    productInfo: String,
     user: { type: String, required: true },
     address: { type: String, required: true },
     phoneNumber: { type: Number, required: true },
@@ -17,6 +17,8 @@ const announceSchema = mongoose.Schema(
     timestamps: true,
   }
 );
+
+
 
 const Announce = mongoose.model("Announce", announceSchema);
 

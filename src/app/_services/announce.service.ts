@@ -12,8 +12,9 @@ const AUTH_API = "http://localhost:8888/";
 export class AuthService {
   constructor(private http: HttpClient) {}
   
-  getAnnounces():Observable<any> {
-    return this.http.get(AUTH_API+'recherche')
+  getAnnounces(term:string): Observable<any> {
+    return this.http.get(AUTH_API+`recherche/${term}`)
   }
+
 
 }
