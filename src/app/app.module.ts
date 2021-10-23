@@ -6,13 +6,12 @@ import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { PhonesComponent } from "./phones/phones.component";
-import { routes } from "./app-routing.module";
 import { HousesComponent } from "./houses/houses.component";
 import { CarsComponent } from "./cars/cars.component";
-import { authInterceptorProviders } from "./_helpers/auth.interceptor";
 import { JoinComponent } from "./join/join.component";
 import { LoginComponent } from "./login/login.component";
-
+import { ProfileComponent } from "./profile/profile.component";
+import { authInterceptorProviders } from "./_helpers/auth.interceptor";
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,13 +22,7 @@ import { LoginComponent } from "./login/login.component";
     JoinComponent,
     LoginComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes),
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent],
