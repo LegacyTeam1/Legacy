@@ -17,19 +17,16 @@
   }
 </style>
 
-<div class="grid grid-cols-5 grid-rows-2  h-screen">
-  
-
+<div class="grid grid-cols-5 grid-rows-2 h-screen">
   <div class="col-start-3 col-end-6 row-start-1 row-end-4 py-12">
-    
-  <!-- <section class="shadow-xl rounded-md w-full lg:w-11/12 lg:mx-auto"> -->
-   
+    <!-- <section class="shadow-xl rounded-md w-full lg:w-11/12 lg:mx-auto"> -->
+
     <!-- Middle section -->
     <div
       class="
         w-100%
         h-3/4
-        flex 
+        flex
         justify-center
         items-stretch
         border-r-0 border-l-0
@@ -355,109 +352,109 @@
         </div>
       </div>
     </div>
-  <!-- </section> -->
-</div>
- <!-- Left section -->
-    <!-- component -->
-    <div class="leading-loose col-span-2">
-      <form class="max-w-md m-4 p-10 bg-white bg-opacity-25 rounded shadow-xl" #heroForm="ngForm" >
-        <p class="text-gray-800 font-medium">Product information</p>
-        <div class="">
-          <label class="block text-sm text-gray-00" for="cus_name"></label>
-          <input
-            class="w-full px-5 py-1 text-gray-700 bg-white rounded"
-            id="productInfo"   
-            name="productInfo"
-            type="text"
-            required=""
-            [(ngModel)]="data.productInfo" 
-          />
-        </div>
-        <div class="mt-2 text-gray-800 font-medium">
-          <label for="cars">Category</label>
-          <select
-            name="category" 
-            id="category"
-            class="w-full px-2 py-2 text-gray-700 bg-white rounded"
-            [(ngModel)]="data.category" 
-            >
-            <option value="Houses">Houses</option>
-            <option value="Cars">Cars</option>
-            <option value="phones">Phones</option>
-          </select>
-        </div>
-        <p class='bg-black' >{{data.category}} </p>
-        <div class="mt-2">
-          <label class="text-gray-800 font-medium" for="cus_email"
-            >Address</label>
-          <input
-            class="w-full px-2 py-2 text-gray-700 bg-white rounded"
-            id="adress"
-            name="cus_email"
-            type="text"
-            required=""
-            [(ngModel)]="data.adress" 
-          />
-        </div>
-        <div class="mt-2">
-          <label class="text-gray-800 font-medium" for="cus_email"
-            >Mobile Number</label>
-          <label class="hidden text-sm block text-gray-600" for="cus_email"
-            >mobile number</label
+    <!-- </section> -->
+  </div>
+  <!-- Left section -->
+  <!-- component -->
+  <div class="leading-loose col-span-2">
+    <form
+      class="max-w-md m-4 p-10 bg-white bg-opacity-25 rounded shadow-xl"
+      #heroForm="ngForm"
+    >
+      <p class="text-gray-800 font-medium">Product information</p>
+      <div class="">
+        <label class="block text-sm text-gray-00" for="cus_name"></label>
+        <input
+          class="w-full px-5 py-1 text-gray-700 bg-white rounded"
+          id="productInfo"
+          name="productInfo"
+          type="text"
+          required=""
+          [(ngModel)]="data.productInfo"
+        />
+      </div>
+      <div class="mt-2 text-gray-800 font-medium">
+        <label for="cars">Category</label>
+        <select
+          name="category"
+          id="category"
+          class="w-full px-2 py-2 text-gray-700 bg-white rounded"
+          [(ngModel)]="data.category"
+        >
+          <option value="Houses">Houses</option>
+          <option value="Cars">Cars</option>
+          <option value="phones">Phones</option>
+        </select>
+      </div>
+      <p class="bg-black">{{ data.category }}</p>
+      <div class="mt-2">
+        <label class="text-gray-800 font-medium" for="cus_email">Address</label>
+        <input
+          class="w-full px-2 py-2 text-gray-700 bg-white rounded"
+          id="adress"
+          name="cus_email"
+          type="text"
+          required=""
+          [(ngModel)]="data.adress"
+        />
+      </div>
+      <div class="mt-2">
+        <label class="text-gray-800 font-medium" for="cus_email"
+          >Mobile Number</label
+        >
+        <label class="hidden text-sm block text-gray-600" for="cus_email"
+          >mobile number</label
+        >
+        <input
+          class="w-full px-2 py-2 text-gray-700 bg-white rounded"
+          id="phoneNumber"
+          name="phoneNumber"
+          type="text"
+          required=""
+          [(ngModel)]="data.phoneNumber"
+        />
+      </div>
+      <div class="mt-2">
+        <label class="text-gray-800 font-medium" for="cus_email"
+          >Image Url</label
+        >
+        <label class="hidden text-sm block text-gray-600" for="cus_email"
+          >image</label
+        >
+        <input
+          class="w-full px-2 py-2 text-gray-700 bg-white rounded"
+          id="imageUrl"
+          name="imageUrl"
+          type="text"
+          required=""
+          [(ngModel)]="data.imageUrl"
+        />
+      </div>
+      <!-- component -->
+      <div class="flex flex-col">
+        <label for="price" class="text-gray-800 font-medium">Price</label>
+        <div class="flex flex-row">
+          <span
+            class="
+              flex
+              items-center
+              bg-grey-lighter
+              rounded rounded-r-none
+              px-3
+              font-bold
+              text-grey-darker
+            "
+            >$</span
           >
           <input
+            type="number"
+            name="price"
             class="w-full px-2 py-2 text-gray-700 bg-white rounded"
-            id="phoneNumber"
-            name="phoneNumber"
-            type="text" 
-            required=""
-            [(ngModel)]="data.phoneNumber" 
+            id="price"
+            [(ngModel)]="data.price"
           />
         </div>
-        <div class="mt-2">
-          <label class="text-gray-800 font-medium" for="cus_email"
-            >Image Url</label>
-          <label class="hidden text-sm block text-gray-600" for="cus_email"
-            >image</label
-          >
-          <input
-            class="w-full px-2 py-2 text-gray-700 bg-white rounded"
-            id="imageUrl"
-            name="imageUrl"
-            type="text"
-            required=""
-            [(ngModel)]="data.imageUrl" 
-          />
-        </div>
-        <!-- component -->
-        <div class="flex flex-col">
-          <label
-            for="price"
-            class="text-gray-800 font-medium"
-            >Price</label
-          >
-          <div class="flex flex-row">
-            <span
-              class="
-                flex
-                items-center
-                bg-grey-lighter
-                rounded rounded-r-none
-                px-3
-                font-bold
-                text-grey-darker
-              "
-              >$</span
-            >
-            <input
-              type="number"
-              name="price"
-              class="w-full px-2 py-2 text-gray-700 bg-white rounded"
-              id= "price"
-              [(ngModel)]="data.price" 
-            />
-          </div>
-        </div>
-      </form>
-    </div>
+      </div>
+    </form>
+  </div>
 </div>
