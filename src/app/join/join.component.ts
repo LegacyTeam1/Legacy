@@ -1,4 +1,3 @@
-import { createOfflineCompileUrlResolver } from "@angular/compiler";
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../_services/auth.service";
 
@@ -26,7 +25,7 @@ export class JoinComponent implements OnInit {
     
     this.authService.register(username, email, password).subscribe(
       (data) => {
-        console.log(data);
+       
         this.isSuccessful = true;
         this.isSignUpFailed = false;
       },

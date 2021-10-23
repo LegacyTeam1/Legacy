@@ -1,7 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../_services/auth.service";
 import { TokenStorageService } from "../_services/token-storage.service";
+import { Router } from "@angular/router";
 
+
+export var userName = ''
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -16,10 +19,12 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = "";
   roles: string[] = [];
+  userName = userName
 
   constructor(
     private authService: AuthService,
-    private tokenStorage: TokenStorageService
+    private tokenStorage: TokenStorageService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,13 +39,15 @@ export class LoginComponent implements OnInit {
 
     this.authService.login(email, password).subscribe(
       (data) => {
+        console.log(data)
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
 
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
-        this.reloadPage();
+        this.router.navigate(["profile"]);
+        userName = data.username
       },
       (err) => {
         this.errorMessage = err.error.message;

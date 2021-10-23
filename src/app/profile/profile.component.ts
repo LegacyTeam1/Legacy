@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Indata } from '../check';
 import { HttpClient } from "@angular/common/http";
-
+import {userName} from '../login/login.component'
 
 
 @Component({
@@ -14,11 +14,12 @@ export class ProfileComponent implements OnInit {
    constructor(private http:HttpClient){}
 
  
-  data = new Indata('','','',0,0,'','');
+  data = new Indata(userName,'','',0,0,'','');
   
+  onSubmit(){
+    
+  }
 
-  onSubmit() { 
-    this.http.post('server',this.data) }
 
   ngOnInit(): void {
   }

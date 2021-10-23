@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ANNONCES } from '../annouces';
+import {Search} from '../main-ui/main-ui.component'
 @Component({
   selector: 'app-phones',
   templateUrl: './phones.component.html',
@@ -9,9 +10,9 @@ export class PhonesComponent implements OnInit {
   
   phones = ANNONCES;
 
-  constructor() { }
+  constructor() {console.log(Search)}
   
-
+   
   ngOnInit(): void {
   }
 

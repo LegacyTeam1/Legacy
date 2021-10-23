@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from "../_services/announce.service";
 
+
+
+export var Search = '' 
 @Component({
   selector: 'app-main-ui',
   templateUrl: './main-ui.component.html',
@@ -7,9 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainUIComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService) {}
+
+  
 
   ngOnInit(): void {
+    this.getData()
   }
 
+   getData(){
+    this.authService.getAnnounces().subscribe(data => {
+      Search = data
+     
+    })
+   
+   }
 }
