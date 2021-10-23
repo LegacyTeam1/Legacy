@@ -1,6 +1,8 @@
-var announceRouter = require("express").Router();
+var Router = require("express").Router();
 var Controller = require("./controllers");
 
-announceRouter.route("/create").post(Controller.createAnnounce);
+Router.route("/create").post(Controller.createAnnounce);
+Router.route("/signup").post(Controller.createUser);
+Router.route("/signin").post(Controller.loginUser);
 
-module.exports = announceRouter;
+module.exports = Router;
