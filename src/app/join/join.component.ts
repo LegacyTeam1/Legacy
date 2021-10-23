@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { AuthService } from "../_services/auth.service";
 
 @Component({
   selector: 'app-join',
@@ -6,10 +7,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./join.component.scss']
 })
 export class JoinComponent implements OnInit {
+  form: any = {
+    username: null,
+    email: null,
+    password: null,
+  };
 
-  constructor() { }
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = "";
 
-  ngOnInit(): void {
+  constructor(private authService: AuthService) {}
+  ngOnInit(): void {}
+
+  onSubmit(): void {
+    const { username, email, password } = this.form;
+
+    this.authService.register(username, email, password).subscribe(
+      (data) => {
+        console.log(data);
+        this.isSuccessful = true;
+        this.isSignUpFailed = false;
+      },
+      (err) => {
+        this.errorMessage = err.error.message;
+        this.isSignUpFailed = true;
+      }
+    );
   }
 
 }

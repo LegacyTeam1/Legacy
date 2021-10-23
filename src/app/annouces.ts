@@ -4,8 +4,9 @@ export interface Announce{
     category: string,
     phoneNumber : number,
     price: number,
-    imageUrl : string 
-}
+    imageUrl : string ,
+    productInfo: string,
+  }
 
 export const ANNONCES : Announce[] = [
     { 
@@ -14,7 +15,8 @@ export const ANNONCES : Announce[] = [
         adress: 'mourouj',
         phoneNumber : 22151525,
         price:  775 ,
-        imageUrl : 'https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/5/2/652a7adb1b_98148_01-intro-773.jpg'
+        imageUrl : 'https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/5/2/652a7adb1b_98148_01-intro-773.jpg',
+        productInfo: '123'
     },
     { 
         username: 'Ahmed',
@@ -22,20 +24,23 @@ export const ANNONCES : Announce[] = [
         adress: 'mourouj',
         phoneNumber : 25611525,
         price:  854 ,
-        imageUrl : 'https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/5/2/652a7adb1b_98148_01-intro-773.jpg'
+        imageUrl : 'https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/5/2/652a7adb1b_98148_01-intro-773.jpg',
+        productInfo: '123'
     },    { 
         username: 'heni',
         category : 'house',
         adress: 'jerba',
         phoneNumber : 22151525,
         price:  968 ,
-        imageUrl : 'https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/5/2/652a7adb1b_98148_01-intro-773.jpg'
+        imageUrl : 'https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/5/2/652a7adb1b_98148_01-intro-773.jpg',
+        productInfo: '123'
     },    { 
         username: 'Wissem',
         category : 'phone',
         adress: 'mourouj',
         phoneNumber : 22151525,
         price:  775 ,
-        imageUrl : 'https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/5/2/652a7adb1b_98148_01-intro-773.jpg'
+        imageUrl : 'https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/5/2/652a7adb1b_98148_01-intro-773.jpg',
+        productInfo: '123'
     }
 ]

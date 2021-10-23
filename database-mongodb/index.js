@@ -1,14 +1,15 @@
-const mongoose = require('mongoose');
-const mongoUri = 'mongodb://localhost/Announcements';
+const mongoose = require("mongoose");
+require("dotenv").config();
+const db = main().catch((err) => console.log(err));
 
-mongoose.connect(mongoUri,{ 
-  useNewUrlParser: true ,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-  useCreateIndex : true
-}, () => {
-  console.log("db connected");
-});
-const db = mongoose.connection;
-
+async function main() {
+  await mongoose.connect(
+    process.env.ATLAS_URI,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    },
+    () => console.log("db works")
+  );
+}
 module.exports = db;

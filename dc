@@ -1,0 +1,278 @@
+[33mcommit 4eecf71b2b156141821e1c54dad8d9422431a8e0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31mpro/main[m[33m)[m
+Merge: 6d8a5d4 5cc266d
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Fri Oct 22 10:49:01 2021 +0100
+
+    Merge pull request #42 from WissemBrinis/main
+    
+    db connected and server is running
+
+[33mcommit 5cc266db435a2ec78969f7fb0ae7919a6fa20e67[m
+Author: WissemBrinis <wissembenbrinis@gmail.com>
+Date:   Fri Oct 22 10:47:18 2021 +0100
+
+    db connected and server is running
+
+[33mcommit fd6bb0138603d29b624343632442fd8969394414[m
+Merge: 0502baa 6d8a5d4
+Author: WissemBrinis <wissembenbrinis@gmail.com>
+Date:   Fri Oct 22 10:37:05 2021 +0100
+
+    server FLoder Conflict
+
+[33mcommit 0502baa51ac11f4fa4fedfd4b4d91bdca6ef2318[m
+Author: WissemBrinis <wissembenbrinis@gmail.com>
+Date:   Fri Oct 22 10:25:12 2021 +0100
+
+    pulling lastet work
+
+[33mcommit 6d8a5d42959c1cc423a226b3d6a300025ee23490[m
+Merge: 45b2877 90c22cd
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Fri Oct 22 10:24:40 2021 +0100
+
+    Merge pull request #41 from LegacyTeam1/ahmed
+    
+    Ahmed
+
+[33mcommit 90c22cd36facce42d087614facbbb0b32200b044[m
+Merge: f2e7884 cd66451
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Fri Oct 22 10:24:07 2021 +0100
+
+    Merge pull request #39 from ahmedcheikh20/main
+    
+    server side
+
+[33mcommit cd66451637072792564c428c0e0e04a718e16dbf[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ahmedcheikh20 <ahmedc392@gmail.com>
+Date:   Fri Oct 22 10:18:18 2021 +0100
+
+    database
+
+[33mcommit 07b200d8dc181bc81030221e955a743684beaf5d[m
+Author: ahmedcheikh20 <ahmedc392@gmail.com>
+Date:   Fri Oct 22 01:41:55 2021 +0100
+
+    backend archi
+
+[33mcommit c03494277dfa2708ba9b0dac397595a832adb3fc[m
+Author: ahmedcheikh20 <ahmedc392@gmail.com>
+Date:   Thu Oct 21 23:40:54 2021 +0100
+
+    new architecture
+
+[33mcommit 5eecdb0c658b9c75667ec83b52b0527b56dbaf9a[m
+Merge: c1a9e9e 45b2877
+Author: ahmedcheikh20 <ahmedc392@gmail.com>
+Date:   Thu Oct 21 20:26:34 2021 +0100
+
+    check
+
+[33mcommit 45b28776eda599784e18a23c4aa1d43ce3550542[m
+Merge: 35c8ff6 dc44a7a
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 20:22:45 2021 +0100
+
+    Merge pull request #38 from LegacyTeam1/heni
+    
+    check
+
+[33mcommit dc44a7a179b028b6d7734371c430548cacdedef2[m[33m ([m[1;31mpro/heni[m[33m)[m
+Merge: 27d296f 35c8ff6
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 20:22:26 2021 +0100
+
+    Merge pull request #37 from LegacyTeam1/main
+    
+    check
+
+[33mcommit 35c8ff679f3127eeac7cd0dcee2425bc014e7d78[m
+Author: heniLtaief <heniltaief@gmail.com>
+Date:   Thu Oct 21 20:21:53 2021 +0100
+
+    check
+
+[33mcommit c1a9e9e78c3921f98cfebe1e3d474f589e5a35ec[m
+Merge: 549afb1 5acadcd
+Author: ahmedcheikh20 <ahmedc392@gmail.com>
+Date:   Thu Oct 21 20:20:19 2021 +0100
+
+    Merge branch 'main' of https://github.com/LegacyTeam1/Legacy into main
+
+[33mcommit f2e7884c684d46739c680a7f695c5e78ac67f75d[m
+Merge: 3df01c6 549afb1
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 20:08:08 2021 +0100
+
+    Merge pull request #36 from ahmedcheikh20/main
+    
+    missed
+
+[33mcommit 549afb1808c04b1653afe6763744823fbdbf4a8f[m
+Author: ahmedcheikh20 <ahmedc392@gmail.com>
+Date:   Thu Oct 21 20:07:03 2021 +0100
+
+    missed
+
+[33mcommit 0c9ef26be6e9234e958f66be0d6cea6fa5904cb3[m
+Merge: c7fd9b4 5acadcd
+Author: heniLtaief <heniltaief@gmail.com>
+Date:   Thu Oct 21 20:04:28 2021 +0100
+
+    Merge branch 'main' of https://github.com/LegacyTeam1/Legacy
+
+[33mcommit 5acadcd3c2984759fe6ed687d4ac0a2df906f90c[m
+Merge: 0a74cad 3df01c6
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 20:03:17 2021 +0100
+
+    Merge pull request #35 from LegacyTeam1/ahmed
+    
+    Ahmed
+
+[33mcommit 3df01c6b5c9b5fbfb06ffec3400517a9190e8c6d[m
+Merge: 488e067 6bcc61a
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 20:02:57 2021 +0100
+
+    Merge pull request #34 from ahmedcheikh20/main
+    
+    routing
+
+[33mcommit 6bcc61a3ab642bd9e235d9b3aa9566e7be042163[m
+Author: ahmedcheikh20 <ahmedc392@gmail.com>
+Date:   Thu Oct 21 19:50:09 2021 +0100
+
+    routing
+
+[33mcommit c7fd9b450a0f8e2895977dc331bd2c7bdaba1dd1[m
+Author: heniLtaief <heniltaief@gmail.com>
+Date:   Thu Oct 21 19:03:49 2021 +0100
+
+    fix cars houses and mobiles
+
+[33mcommit 0a74cad8ae9e26d5c994fa2fb67801d080215a27[m
+Merge: 7c6e0c7 27d296f
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 15:34:01 2021 +0100
+
+    Merge pull request #33 from LegacyTeam1/heni
+    
+    fixing profile
+
+[33mcommit 27d296f1c52313f1c11c511788059b7510e9bfc4[m
+Merge: cfa4ae0 7c6e0c7
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 15:33:38 2021 +0100
+
+    Merge pull request #32 from LegacyTeam1/main
+    
+    fixing profile
+
+[33mcommit 7c6e0c785ad98c6f3d65526c9a0871c0684ce854[m
+Merge: f85ee6a 6222b5b
+Author: heniLtaief <heniltaief@gmail.com>
+Date:   Thu Oct 21 15:32:26 2021 +0100
+
+    Merge branch 'main' of https://github.com/LegacyTeam1/Legacy
+
+[33mcommit f85ee6ae338bea750a7059a47133cb3e879b009a[m
+Author: heniLtaief <heniltaief@gmail.com>
+Date:   Thu Oct 21 15:31:20 2021 +0100
+
+    fixing profile
+
+[33mcommit 6222b5b6e87775851fbb646a127b12d5d73ae54a[m
+Merge: 7df6fc3 cfa4ae0
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 11:55:49 2021 +0100
+
+    Merge pull request #31 from LegacyTeam1/heni
+    
+    Merge pull request #30 from LegacyTeam1/main
+
+[33mcommit cfa4ae07515abcb4fa7777c2a5f2a9b602d772b7[m
+Merge: bfd4df1 7df6fc3
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 11:55:08 2021 +0100
+
+    Merge pull request #30 from LegacyTeam1/main
+    
+    continue work on data
+
+[33mcommit 7df6fc3e5f6f3cf79ed6ecdae2c741ebea64fc2f[m
+Author: heniLtaief <heniltaief@gmail.com>
+Date:   Thu Oct 21 11:54:09 2021 +0100
+
+    continue
+
+[33mcommit 02d00db464ae17e04192e191313ac68033da4c4e[m
+Merge: 63a7873 ba4a8ec
+Author: heniLtaief <heniltaief@gmail.com>
+Date:   Thu Oct 21 11:36:44 2021 +0100
+
+    Merge branch 'main' of https://github.com/LegacyTeam1/Legacy
+
+[33mcommit 63a787390bfd5298a0bdd60932dcaee119b54a95[m
+Author: heniLtaief <heniltaief@gmail.com>
+Date:   Thu Oct 21 11:35:56 2021 +0100
+
+    testing data
+
+[33mcommit ba4a8ec519ffc4351e5db1e7c7821c21fc84ea7c[m
+Merge: ed7053d 488e067
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 11:34:31 2021 +0100
+
+    Merge pull request #29 from LegacyTeam1/ahmed
+    
+    Ahmed
+
+[33mcommit 488e067d97e10bbc35b942f9de08527a043b3a36[m
+Merge: aef65cb ed7053d
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 11:34:24 2021 +0100
+
+    Merge branch 'main' into ahmed
+
+[33mcommit aef65cbcc0f13571e172302a461360760ce0a666[m
+Merge: 0434faf 1a4e4d6
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 11:32:31 2021 +0100
+
+    Merge pull request #27 from ahmedcheikh20/main
+    
+    c
+
+[33mcommit ed7053d71a1b3a1c89e7da28cd4f667212ccf8e0[m
+Merge: 62bad9c dac0088
+Author: heni_ltaief <87306786+heniLtaief@users.noreply.github.com>
+Date:   Thu Oct 21 11:32:07 2021 +0100
+
+    Merge pull request #28 from WissemBrinis/main
+    
+    rendered API data
+
+[33mcommit 1a4e4d6c39be185baf7f9371e67e203e038c4765[m
+Author: ahmedcheikh20 <ahmedc392@gmail.com>
+Date:   Thu Oct 21 11:29:10 2021 +0100
+
+    render data
+
+[33mcommit dac00884dfba0a775fb0d2fc118c4cba8460ed4d[m
+Author: WissemBrinis <wissembenbrinis@gmail.com>
+Date:   Thu Oct 21 11:28:57 2021 +0100
+
+    rendered API data
+
+[33mcommit d0f69bc08b669757ac2f7ccfe6f59f82771a8056[m
+Merge: 236d865 62bad9c
+Author: ahmedcheikh20 <ahmedc392@gmail.com>
+Date:   Thu Oct 21 10:47:04 2021 +0100
+
+    Merge branch 'main' of https://github.com/LegacyTeam1/Legacy into main
+
+[33mcommit 236d865fadaf3227c9a0e56b5ef33f35d668128d[m
+Author: ahmedcheikh20 <ahmedc392@gmail.com>
+Date:   Thu

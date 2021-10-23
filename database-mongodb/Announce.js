@@ -1,19 +1,22 @@
-const mongoose = require('mongoose');
-const db = require('./index.js');
+const { Schema } = require("mongoose");
+const mongoose = require("mongoose");
+const db = require("./index.js");
 mongoose.Promise = global.Promise;
 
-const announceSchema = new mongoose.Schema({
-  username : String,
-  adress : {type :String , require : true},
-  phoneNumber : {type :Number , require : true},
-  price : {type :Number , require : true},
-  imageUrl : String,
-  category : string,
-}, 
+const announceSchema = mongoose.Schema(
   {
-    timestamps: true
+    username: { type: String, required: true, unique: true },
+    address: { type: String, required: true, unique: true },
+    phoneNumber: { type: Number, required: true, unique: true },
+    price: { type: Number, required: true, unique: true },
+    imageUrl: String,
+    category: String,
+  },
+  {
+    timestamps: true,
   }
 );
 
-const Announce = mongoose.model('Announce',announceSchema);
+const Announce = mongoose.model("Announce", announceSchema);
+
 module.exports = Announce;
