@@ -2,6 +2,7 @@
   "name": "angular11-tailwindcss",
   "version": "0.0.0",
   "scripts": {
+    "ngShared": "ng g s shared/shared",
     "ng": "ng",
     "server": "nodemon ./Server/index.js",
     "start": "ng serve",
