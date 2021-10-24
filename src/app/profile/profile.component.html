@@ -17,8 +17,8 @@
   }
 </style>
 
-<div class="grid grid-cols-5 grid-rows-2 h-screen">
-  <div class="col-start-3 col-end-6 row-start-1 row-end-4 py-12">
+<div class="grid grid-cols-5  grid-rows-2 min-h-screen">
+  <div class="col-start-2 col-end-6 row-start-1 row-end-4 mt-8 h-96 mr-24">
     <!-- <section class="shadow-xl rounded-md w-full lg:w-11/12 lg:mx-auto"> -->
 
     <!-- Middle section -->
@@ -36,7 +36,7 @@
         gap-4
       "
     >
-      <div class="transform hover:scale-110 rounded overflow-hidden shadow-lg">
+      <div class="bg-white bg-opacity-25 rounded-lg p-6 transform hover:scale-110 rounded overflow-hidden shadow-lg">
         <img
           class="w-full"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpB0Z7v0_Wew4N_XQqDUV-UOESB7AxpqtG_Q&usqp=CAU"
@@ -356,9 +356,9 @@
   </div>
   <!-- Left section -->
   <!-- component -->
-  <div class="leading-loose col-span-2">
+  <div class="leading-loose col-start1 col-end-2">
     <form
-      class="max-w-md m-4 p-10 bg-white bg-opacity-25 rounded shadow-xl"
+      class="w-96 m-4 p-10 bg-white bg-opacity-25 rounded shadow-xl"
       #heroForm="ngForm"
     >
       <p class="text-gray-800 font-medium">Product information</p>
@@ -467,8 +467,8 @@
             transition-colors
             duration-700
             transform
-            bg-indigo-500
-            hover:bg-blue-400
+            bg-gray-800
+            hover:bg-yellow-600
             text-gray-100 text-lg
             rounded-lg
             focus:border-4
