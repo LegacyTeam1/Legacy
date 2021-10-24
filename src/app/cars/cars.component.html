@@ -38,13 +38,14 @@
           <p class="text-black font-normal text-base text-2xl">Featured Ads</p>
         </div>
         <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white bg-opacity-25 rounded-lg p-6 " *ngFor="let car of cars" >
+          <div class="bg-white bg-opacity-25 rounded-lg p-6 transform hover:scale-110 rounded overflow-hidden shadow-lg" *ngFor="let car of cars" >
             <img
               class="w-full max-h-60"
               src= {{car.imageUrl}}
-              alt="Mountain"
+              alt=""
             />
             <div>
+             
               <p>
                 {{car.productInfo}}
             </p>
@@ -52,8 +53,8 @@
                          {{car.price}}
               </p>
               <p>
-                  {{car.category}}
-              </p>
+                Phone Number: {{car.phoneNumber}}
+             </p>
             </div>
           </div>
         </div>

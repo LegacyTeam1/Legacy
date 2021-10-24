@@ -53,8 +53,8 @@
     </div>
   </div>
 <!-- search section -->
-<div class="w-full row-start-2 row-end-2 gap-6">
-  <div class="bg-white bg-opacity-25 rounded-lg p-6" *ngFor="let car of article" >
+<div class="annonces w-full row-start-1 row-end-1 mt-64 h-full">
+  <div class="bg-white bg-opacity-25 rounded-lg p-6 transform hover:scale-110 rounded" *ngFor="let car of article" >
     <img
       class="w-full max-h-60"
       src= {{car.imageUrl}}
@@ -74,12 +74,10 @@
   </div>
 </div>
   
-
-
   <div
-    class="category gap-12 row-start-2 row-end-2 pt-40 col-start-2 col-end-5 mb-24"
+    class="category gap-12 row-start-2 row-end-2 pt-44 col-start-2 col-end-5"
   >
-    <section class="container mx-auto px-6 my-1 inline-flex -m-4 gap-10">
+    <section class="container mx-auto px-6 my-24 inline-flex -m-4 gap-10">
       <div class="p-2 md:w-40">
         <a         routerLink="/phones"
 
@@ -212,38 +210,6 @@
           </svg>
           <div>
             <p class="text-xs font-medium ml-2">Latest Adds</p>
-          </div>
-        </div>
-      </div>
-      <div class="p-2 md:w-40">
-        <div
-          class="
-            flex
-            items-center
-            p-4
-            bg-red-200
-            rounded-lg
-            shadow-xs
-            cursor-pointer
-            hover:bg-red-500 hover:text-gray-100
-          "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-10 w-10"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
-            />
-          </svg>
-          <div>
-            <p class="text-xs font-medium ml-2">Other</p>
           </div>
         </div>
       </div>
