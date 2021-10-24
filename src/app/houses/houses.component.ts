@@ -20,5 +20,6 @@ export class HousesComponent implements OnInit {
       this.houses = data 
     })
   }
+  
 
 }

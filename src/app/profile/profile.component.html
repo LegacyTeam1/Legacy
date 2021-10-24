@@ -36,6 +36,7 @@
         gap-4
       "
     >
+    {{Announces | json}}
      
       <!--Card 1-->
       <div class="transform hover:scale-110 rounded overflow-hidden shadow-lg">
@@ -172,6 +173,7 @@
       class="w-96 m-4 p-10 bg-white bg-opacity-25 rounded shadow-xl"
       #heroForm="ngForm"
     >
+
       <p class="text-gray-800 font-medium">Product information</p>
       <div class="">
         <label class="block text-sm text-gray-00" for="cus_name"></label>
@@ -198,7 +200,7 @@
         </select>
       </div>
 
-      <p class="bg-black">{{ data.category }}</p>
+    
 
       <div class="mt-2">
         <label class="text-gray-800 font-medium" for="cus_email">Address</label>
@@ -226,7 +228,7 @@
           name="phoneNumber"
           type="text"
           required=""
-          [(ngModel)]="data.phoneNumber"
+          
         />
       </div>
       <div class="mt-2">
@@ -242,9 +244,12 @@
           name="imageUrl"
           type="text"
           required=""
-          [(ngModel)]="data.imageUrl"
+          [(ngModel)] = "data.imageUrl"
+          
+
         />
       </div>
+     
       <!-- component -->
       <div class="flex flex-col">
         <label for="price" class="text-gray-800 font-medium">Price</label>
@@ -269,7 +274,6 @@
             [(ngModel)]="data.price"
           />
         </div>
-
         <button
           class="
             p-2
@@ -289,7 +293,6 @@
         >
           Submit
         </button>
-
       </div>
     </form>
   </div>
