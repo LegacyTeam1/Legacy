@@ -34,11 +34,9 @@ exports.restieve = (req, res) => {
   console.log(condition);
   Announce.find(condition)
     .then((result) => {
-      console.log(result);
       res.status(201).send(result);
     })
     .catch(() => {
-      console.log("iam in err");
       res.status(403).send("can Not retrieve!");
     });
 };
