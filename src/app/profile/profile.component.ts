@@ -5,8 +5,7 @@ import { Indata } from '../check';
 import { CreateService } from '../_services/create.service';
 
 
-import { Component, OnInit } from "@angular/core";
-import { Indata } from "../check";
+
 import { HttpClient } from "@angular/common/http";
 import { TokenStorageService } from "../_services/token-storage.service";
 
@@ -18,10 +17,10 @@ import { TokenStorageService } from "../_services/token-storage.service";
 })
 export class ProfileComponent implements OnInit {
   currentUser: any;
-  constructor(private http: HttpClient, private token: TokenStorageService) {}
+  constructor(private token: TokenStorageService, private CreateService: CreateService) {}
 
 
-   constructor(private CreateService: CreateService){}
+  
 
   userName = localStorage.getItem('username') || ''
   data = new Indata(this.userName,'','',0,0,'','');
@@ -38,11 +37,7 @@ export class ProfileComponent implements OnInit {
   }
 
 
-  data = new Indata("", "", "", 0, 0, "", "");
 
-  onSubmit() {
-    this.http.post("server", this.data);
-  }
 
 
   ngOnInit(): void {
