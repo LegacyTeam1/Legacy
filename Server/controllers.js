@@ -35,6 +35,7 @@ exports.restieve = (req, res) => {
 };
 
 
+
 exports.announceUser = (req,res) => {
  condition = req.params
  Announce.find(condition)
@@ -57,6 +58,7 @@ exports.search = (req,res) => {
         })
         res.send(arr)
        })
+
 }
 
 
