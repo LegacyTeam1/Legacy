@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ANNONCES } from '../annouces';
+import { announceService } from "../_services/announce.service";
+
 @Component({
   selector: 'app-phones',
   templateUrl: './phones.component.html',
@@ -7,12 +9,20 @@ import { ANNONCES } from '../annouces';
 })
 export class PhonesComponent implements OnInit {
   
-  phones = ANNONCES;
+  phones:any;
 
-  constructor() { }
+  constructor(private announceService: announceService) {}
   
-
+   
   ngOnInit(): void {
+    this.getPhones()
+  }
+
+  getPhones(){
+    this.announceService.getPhones().subscribe(data=>{
+      this.phones = data 
+      console.log(this.phones)
+    })
   }
 
 }

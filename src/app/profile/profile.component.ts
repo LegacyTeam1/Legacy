@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Indata } from '../check';
-import { HttpClient } from "@angular/common/http";
 
+import { CreateService } from '../_services/create.service';
 
 
 @Component({
@@ -11,14 +11,22 @@ import { HttpClient } from "@angular/common/http";
 })
 export class ProfileComponent implements OnInit {
 
-   constructor(private http:HttpClient){}
+   constructor(private CreateService: CreateService){}
 
- 
-  data = new Indata('','','',0,0,'','');
+  userName = localStorage.getItem('username') || ''
+  data = new Indata(this.userName,'','',0,0,'','');
+  err = ''
   
+  
+  onSubmit(){
+    this.CreateService.create(this.data).subscribe(
+      rst => {
+       this.data=  new Indata(this.userName,'','',0,0,'','')
+      }
+    )
+    
+  }
 
-  onSubmit() { 
-    this.http.post('server',this.data) }
 
   ngOnInit(): void {
   }
