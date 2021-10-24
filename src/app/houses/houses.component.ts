@@ -1,7 +1,6 @@
 import { Component, OnInit, Output } from "@angular/core";
 import { Router } from "@angular/router";
 import { announceService } from "../_services/announce.service";
-import { BehaviorSubject } from "rxjs";
 
 @Component({
   selector: "app-houses",
@@ -9,7 +8,8 @@ import { BehaviorSubject } from "rxjs";
   styleUrls: ["./houses.component.scss"],
 })
 export class HousesComponent implements OnInit {
-  @Output() houses: any;
+  houses: any;
+  @Output() house: any;
 
   constructor(
     private announceService: announceService,
