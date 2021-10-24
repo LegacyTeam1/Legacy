@@ -35,16 +35,15 @@ exports.restieve = (req, res) => {
 };
 
 
-exports.search = (req,res) => {
-   
-   Announce.find({})
-       .then((result) => {
-        var  condition = req.params.id    
-        var arr = result.filter(e=> {
-          return e.productInfo.includes(condition)
-        })
-        res.send(arr)
-       })
+exports.search = (req,res) => {  
+  Announce.find({})
+  .then((result) => {
+   var  condition = req.params.id    
+   var arr = result.filter(e=> {
+     return e.productInfo.includes(condition)
+    })
+   res.send(arr)
+  })
 }
 
 
