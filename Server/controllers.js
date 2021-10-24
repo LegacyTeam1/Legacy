@@ -21,6 +21,14 @@ exports.createAnnounce = (req, res) => {
     .catch((err) => console.log(err));
 };
 
+exports.retrieveOne = (req, res) => {
+  let id = req.params;
+  let category = req.category;
+  Announce.findOne({ id: _id })
+    .then((result) => console.log(result))
+    .catch((err) => console.log(err));
+};
+
 exports.restieve = (req, res) => {
   var condition = req.params;
   console.log(condition);

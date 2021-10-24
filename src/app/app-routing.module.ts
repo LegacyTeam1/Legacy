@@ -9,19 +9,19 @@ import { LoginComponent } from "./login/login.component";
 import { MainUIComponent } from "./main-ui/main-ui.component";
 import { PhonesComponent } from "./phones/phones.component";
 import { ProfileComponent } from "./profile/profile.component";
-
+import { DisplayComponent } from "./display/display.component";
 
 const routes: Routes = [
-  { path: 'login',  component: LoginComponent} ,
-  { path: 'join',  component:JoinComponent} ,
-  
-  { path: 'cars',  component: CarsComponent} ,
-  { path: 'phones',  component: PhonesComponent} ,
-  { path: 'houses',  component: HousesComponent },
-  { path: 'profile',  component: ProfileComponent },
-  { path: 'mainUI',  component: MainUIComponent}
-  ,
-  {path: '', pathMatch:"full", redirectTo: 'mainUI' }
+  { path: "login", component: LoginComponent },
+  { path: "join", component: JoinComponent },
+
+  { path: "cars", component: CarsComponent },
+  { path: "phones", component: PhonesComponent },
+  { path: "houses", component: HousesComponent },
+  { path: "profile", component: ProfileComponent },
+  { path: "mainUI", component: MainUIComponent },
+  { path: "", pathMatch: "full", redirectTo: "mainUI" },
+  { path: "display", component: DisplayComponent },
 ];
 
 @NgModule({
@@ -29,4 +29,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
