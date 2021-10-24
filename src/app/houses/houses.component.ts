@@ -16,9 +16,11 @@ export class HousesComponent implements OnInit {
     this.getHouses()
   }
   getHouses(){
-    this.announceService.getCars().subscribe(data=>{
+    this.announceService.getHouses().subscribe(data=>{
       this.posts = data 
+      console.log(this.posts)
     })
   }
+  
 
 }

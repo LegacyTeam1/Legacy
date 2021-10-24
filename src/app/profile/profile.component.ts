@@ -22,6 +22,9 @@ export class ProfileComponent implements OnInit {
   data = new Indata(this.userName,'','',0,0,'','');
   err = ''
   
+  onChange(e:any):void{
+   console.log(e)
+  }
   
   onSubmit(){
     this.CreateService.create(this.data).subscribe(
@@ -29,11 +32,17 @@ export class ProfileComponent implements OnInit {
        this.data=  new Indata(this.userName,'','',0,0,'','')
       }
     )
-    
   }
-
+  
 
   ngOnInit(): void {
     this.currentUser = this.token.getUser();
   }
+
+  values = '';
+
+  onKey(event: any) { // without type info
+    this.values += event.target.value + ' | ';
+  }
+
 }
