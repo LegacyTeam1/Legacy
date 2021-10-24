@@ -12,6 +12,8 @@ import { JoinComponent } from "./join/join.component";
 import { LoginComponent } from "./login/login.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { authInterceptorProviders } from "./_helpers/auth.interceptor";
+import { SearchComponent } from './search/search.component';
+import { MainUIComponent } from "./main-ui/main-ui.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,8 @@ import { authInterceptorProviders } from "./_helpers/auth.interceptor";
     CarsComponent,
     JoinComponent,
     LoginComponent,
+    SearchComponent,
+    MainUIComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 

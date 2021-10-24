@@ -6,23 +6,47 @@ const jwt = require("jsonwebtoken");
 
 // var Image = require ('../database-mongodb/Announce')
 const upload = require("../database-mongodb/utils/multer");
+const { constructorParametersDownlevelTransform } = require("@angular/compiler-cli");
 // const cloudinary = require ('../database-mongodb/utils/cloudinary')
 // const path = require('path')
 
 exports.createAnnounce = (req, res) => {
-  Announce.create(req.body)
+  var username = req.body.productInfo + 'foo'
+  var article = {...req.body,username}
+  console.log(article)
+  Announce.create(article)
     .then((result) => res.send(result))
     .catch((err) => console.log(err));
 };
+
+
 exports.restieve = (req, res) => {
-  Announce.find({})
+  var condition = req.params
+  console.log(condition)
+  Announce.find(condition)
     .then((result) => {
+      console.log(result)
       res.status(201).send(result);
     })
     .catch(() => {
+      console.log('iam in err')
       res.status(403).send("can Not retrieve!");
     });
 };
+
+
+exports.search = (req,res) => {
+   
+   Announce.find({})
+       .then((result) => {
+        var  condition = req.params.id    
+        var arr = result.filter(e=> {
+          return e.productInfo.includes(condition)
+        })
+        res.send(arr)
+       })
+}
+
 
 exports.restieveOne = (req, res) => {
   Announce.findOne({ _id: req.params.id })
@@ -56,6 +80,7 @@ exports.updateOne = (req, res) => {
 
 exports.createUser = async (req, res) => {
   try {
+    
     const { username, email, password } = req.body;
 
     if (!(email && password && username)) {
@@ -118,3 +143,6 @@ exports.loginUser = async (req, res) => {
     console.log(err);
   }
 };
+
+
+

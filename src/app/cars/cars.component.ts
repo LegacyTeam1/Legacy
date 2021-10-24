@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ANNONCES } from '../annouces';
-
+import { announceService } from "../_services/announce.service";
 
 @Component({
   selector: 'app-cars',
@@ -9,10 +9,18 @@ import { ANNONCES } from '../annouces';
 })
 export class CarsComponent implements OnInit {
 
-  cars = ANNONCES
-  constructor() { }
+  cars: any
+  constructor(private announceService:announceService) { }
+
+  
 
   ngOnInit(): void {
+   this.getCars()
   }
-
+  
+  getCars(){
+    this.announceService.getCars().subscribe(data=>{
+      this.cars = data 
+    })
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { announceService } from "../_services/announce.service";
+
 
 @Component({
   selector: "app-houses",
@@ -7,11 +8,17 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ["./houses.component.scss"],
 })
 export class HousesComponent implements OnInit {
-  readonly UrlRoot = "https://jsonplaceholder.typicode.com";
+ 
 
   posts: any;
-  constructor(private http: HttpClient) {}
+  constructor(private announceService: announceService) {}
   ngOnInit(): void {
-    this.posts = this.http.get(this.UrlRoot + "/photos");
+    this.getHouses()
   }
+  getHouses(){
+    this.announceService.getCars().subscribe(data=>{
+      this.posts = data 
+    })
+  }
+
 }

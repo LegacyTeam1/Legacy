@@ -3,6 +3,8 @@ import { AuthService } from "../_services/auth.service";
 import { TokenStorageService } from "../_services/token-storage.service";
 import { Router } from "@angular/router";
 
+
+
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -17,6 +19,7 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = "";
   roles: string[] = [];
+  
 
   constructor(
     private authService: AuthService,
@@ -28,6 +31,7 @@ export class LoginComponent implements OnInit {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
       this.roles = this.tokenStorage.getUser().roles;
+
     }
   }
 
@@ -36,6 +40,7 @@ export class LoginComponent implements OnInit {
 
     this.authService.login(email, password).subscribe(
       (data) => {
+       
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
 
@@ -43,6 +48,7 @@ export class LoginComponent implements OnInit {
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
         this.router.navigate(["profile"]);
+        localStorage.setItem('username',data.username)
       },
       (err) => {
         this.errorMessage = err.error.message;
@@ -50,8 +56,6 @@ export class LoginComponent implements OnInit {
       }
     );
   }
-
-  reloadPage(): void {
-    window.location.reload();
-  }
+  reloadPage(): void {}
 }
+

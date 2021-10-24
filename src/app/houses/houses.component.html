@@ -39,7 +39,7 @@
         <p class="text-black font-normal text-2xl">Featured Ads</p>
       </div>
       <div class="w-full grid grid-cols-2 gap-6">
-        <div *ngFor="let post of posts | async">
+        <div *ngFor="let post of posts ">
           <div class="bg-white bg-opacity-25 rounded-lg p-6">
             <img class="w-full" src={{post.thumbnailUrl}} alt="Mountain" />
             <div>
