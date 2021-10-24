@@ -11,8 +11,8 @@ const { constructorParametersDownlevelTransform } = require("@angular/compiler-c
 // const path = require('path')
 
 exports.createAnnounce = (req, res) => {
-  var username = req.body.productInfo + 'foo'
-  var article = {...req.body,username}
+  var productInfo = req.body.productInfo + 'foo'
+  var article = {...req.body,productInfo}
   console.log(article)
   Announce.create(article)
     .then((result) => res.send(result))
