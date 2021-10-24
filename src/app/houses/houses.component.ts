@@ -10,15 +10,16 @@ import { announceService } from "../_services/announce.service";
 export class HousesComponent implements OnInit {
  
 
-  posts: any;
+  houses: any;
   constructor(private announceService: announceService) {}
   ngOnInit(): void {
     this.getHouses()
   }
   getHouses(){
-    this.announceService.getCars().subscribe(data=>{
-      this.posts = data 
+    this.announceService.getHouses().subscribe(data=>{
+      this.houses = data 
     })
   }
+  
 
 }

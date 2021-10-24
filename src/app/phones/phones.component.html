@@ -38,19 +38,22 @@
         <p class="text-black font-normal text-base text-2xl">Featured Ads</p>
       </div>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white bg-opacity-25 rounded-lg p-6" *ngFor="let phone of phones" >
+        <div class="bg-white bg-opacity-25 rounded-lg p-6 transform hover:scale-110 rounded overflow-hidden shadow-lg" *ngFor="let phone of phones" >
           <img
             class="w-full max-h-60"
             src= {{phone.imageUrl}}
             alt="Mountain"
           />
           <div>
+            <p>
+              {{phone.productInfo}}
+          </p>
             <p class="text-black leading-loose font-normal text-base">
                        {{phone.price}}
             </p>
             <p>
-                {{phone.category}}
-            </p>
+              Phone Number: {{phone.phoneNumber}}
+           </p>
           </div>
         </div>
       </div>

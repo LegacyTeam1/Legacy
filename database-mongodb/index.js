@@ -4,7 +4,7 @@ const db = main().catch((err) => console.log(err));
 
 async function main() {
   await mongoose.connect(
-    "mongodb://localhost/freeMarket",
+    process.env.ATLAS_URI,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
