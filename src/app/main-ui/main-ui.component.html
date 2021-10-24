@@ -53,8 +53,9 @@
     </div>
   </div>
 <!-- search section -->
-<div class="annonces w-full row-start-1 row-end-1 mt-64 h-full">
-  <div class="bg-white bg-opacity-25 rounded-lg p-6 transform hover:scale-110 rounded" *ngFor="let car of article" >
+<div class="annonces row-start-1 row-end-2 col-start-2 col-end-5 grid grid-cols-2 mt-96 ml-20 gap-12">
+  <div class=" w-72 h-96 bg-white bg-opacity-25rounded-lg p-6 
+  transform hover:scale-110 rounded overflow-hidden shadow-lg mt-6" *ngFor="let car of article">
     <img
       class="w-full max-h-60"
       src= {{car.imageUrl}}
@@ -75,7 +76,7 @@
 </div>
   
   <div
-    class="category gap-12 row-start-2 row-end-2 pt-44 col-start-2 col-end-5"
+    class="category gap-12 row-start-1 row-end-1 mt-52 pl-8 col-start-2 col-end-5"
   >
     <section class="container mx-auto px-6 my-24 inline-flex -m-4 gap-10">
       <div class="p-2 md:w-40">
