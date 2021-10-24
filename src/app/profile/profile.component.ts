@@ -1,11 +1,10 @@
 
-
+import { Component, OnInit } from '@angular/core';
+import { Indata } from '../check';
 import { CreateService } from '../_services/create.service';
-
-import { Component, OnInit } from "@angular/core";
-import { Indata } from "../check";
-import { HttpClient } from "@angular/common/http";
 import { TokenStorageService } from "../_services/token-storage.service";
+import { announceService } from "../_services/announce.service";
+
 
 @Component({
   selector: "app-profile",
@@ -14,17 +13,15 @@ import { TokenStorageService } from "../_services/token-storage.service";
 })
 export class ProfileComponent implements OnInit {
   currentUser: any;
+  constructor(private token: TokenStorageService, private CreateService: CreateService,private announceService:announceService ) {}
 
 
-   constructor(private CreateService: CreateService,private token: TokenStorageService){}
+  
 
   userName = localStorage.getItem('username') || ''
   data = new Indata(this.userName,'','',0,0,'','');
-  err = ''
-  
-  onChange(e:any):void{
-   console.log(e)
-  }
+  Announces: any
+ 
   
   onSubmit(){
     this.CreateService.create(this.data).subscribe(
@@ -33,10 +30,18 @@ export class ProfileComponent implements OnInit {
       }
     )
   }
-  
+
+  getUserAnnounce(){
+    this.announceService.getUserAnnounces(this.userName).subscribe(data=>{
+      this.Announces = data 
+    })
+  }
+
+
 
   ngOnInit(): void {
     this.currentUser = this.token.getUser();
+    this.getUserAnnounce()
   }
 
   values = '';

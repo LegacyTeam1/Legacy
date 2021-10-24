@@ -11,9 +11,9 @@ const { constructorParametersDownlevelTransform } = require("@angular/compiler-c
 // const path = require('path')
 
 exports.createAnnounce = (req, res) => {
-  var username = req.body.productInfo + 'foo'
+  var username = req.body.productInfo 
   var article = {...req.body,username}
-  console.log(article)
+
   Announce.create(article)
     .then((result) => res.send(result))
     .catch((err) => console.log(err));
@@ -22,17 +22,29 @@ exports.createAnnounce = (req, res) => {
 
 exports.restieve = (req, res) => {
   var condition = req.params
-  console.log(condition)
+ 
   Announce.find(condition)
     .then((result) => {
-      console.log(result)
+    
       res.status(201).send(result);
     })
     .catch(() => {
-      console.log('iam in err')
+    
       res.status(403).send("can Not retrieve!");
     });
 };
+
+
+exports.announceUser = (req,res) => {
+ condition = req.params
+ Announce.find(condition)
+         .then(rst=>{
+           console.log(rst)
+           res.status(200).send(rst)
+         })
+
+}
+
 
 
 exports.search = (req,res) => {
@@ -118,7 +130,7 @@ exports.createUser = async (req, res) => {
 exports.loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
-    console.log(req.body);
+   ;
 
     if (!(email && password)) {
       res.status(400).send("All input is required");

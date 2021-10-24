@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ANNONCES } from '../annouces';
 import { announceService } from "../_services/announce.service";
 
 @Component({

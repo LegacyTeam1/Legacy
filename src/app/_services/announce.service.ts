@@ -25,10 +25,15 @@ export class announceService {
     return this.http.get(AUTH_API+`category/Cars`)
   }
 
-    getPhones(): Observable<any> {
+  getPhones(): Observable<any> {
       return this.http.get(AUTH_API+`category/phones`)
     }
-      
+
+  getUserAnnounces(user:string):Observable<any> {
+    return this.http.get(AUTH_API+`UserAnnounces/${user}`)
+  }
+
+  
   
 
 
