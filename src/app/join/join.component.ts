@@ -1,11 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
 import { AuthService } from "../_services/auth.service";
 
 @Component({
-  selector: "app-join",
-  templateUrl: "./join.component.html",
-  styleUrls: ["./join.component.scss"],
+  selector: 'app-join',
+  templateUrl: './join.component.html',
+  styleUrls: ['./join.component.scss']
 })
 export class JoinComponent implements OnInit {
   form: any = {
@@ -18,18 +17,17 @@ export class JoinComponent implements OnInit {
   isSignUpFailed = false;
   errorMessage = "";
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService) {}
   ngOnInit(): void {}
 
   onSubmit(): void {
     const { username, email, password } = this.form;
-
+    
     this.authService.register(username, email, password).subscribe(
       (data) => {
-        console.log(data);
+       
         this.isSuccessful = true;
         this.isSignUpFailed = false;
-        this.router.navigate(["/profile"]);
       },
       (err) => {
         this.errorMessage = err.error.message;
@@ -37,4 +35,5 @@ export class JoinComponent implements OnInit {
       }
     );
   }
+
 }

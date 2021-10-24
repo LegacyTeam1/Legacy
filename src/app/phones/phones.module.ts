@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PhonesRoutingModule } from './phones-routing.module';
-import { PhonesComponent } from './phones.component';
+import { PhonesComponent } from './phones.component'; 
 
 
 @NgModule({

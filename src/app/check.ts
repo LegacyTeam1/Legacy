@@ -1,8 +1,8 @@
 export class Indata {
 
   constructor(
-    public username: string,
-    public adress: string,
+    public user: string,
+    public address: string,
     public category: string,
     public phoneNumber: number,
     public price: number,
