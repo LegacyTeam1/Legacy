@@ -13,7 +13,7 @@ const {
 // const path = require('path')
 
 exports.createAnnounce = (req, res) => {
-  var username = req.body.productInfo + "foo";
+  var username = req.body.productInfo;
   var article = { ...req.body, username };
   console.log(article);
   Announce.create(article)
