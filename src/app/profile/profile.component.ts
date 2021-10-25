@@ -50,4 +50,10 @@ export class ProfileComponent implements OnInit {
     this.values += event.target.value + ' | ';
   }
 
+  delete(Announce : any ){
+    this.announceService.deleteAnnounce(Announce).subscribe(data=>{
+      console.log(data)
+    })
+  }
+
 }
