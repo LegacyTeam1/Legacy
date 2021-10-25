@@ -40,7 +40,7 @@ exports.announceUser = (req,res) => {
  condition = req.params
  Announce.find(condition)
          .then(rst=>{
-           console.log(rst)
+          
            res.status(200).send(rst)
          })
 
@@ -63,6 +63,7 @@ exports.search = (req,res) => {
 
 
 exports.restieveOne = (req, res) => {
+ 
   Announce.findOne({ _id: req.params.id })
     .then((result) => {
       res.status(201).send(result);

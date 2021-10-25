@@ -33,8 +33,15 @@ export class announceService {
     return this.http.get(AUTH_API+`UserAnnounces/${user}`)
   }
 
+  deleteAnnounce(Announce:any):Observable<any> {
+    return this.http.delete(AUTH_API+`${Announce._id}`)
+  }
   
+
+  getOneAnnounce(id:any):Observable<any> {
   
+    return this.http.get(AUTH_API+`${id}`)
+  }
 
 
 
