@@ -1,6 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output } from "@angular/core";
+import { Router } from "@angular/router";
 import { announceService } from "../_services/announce.service";
-
 
 @Component({
   selector: "app-houses",
@@ -8,18 +8,19 @@ import { announceService } from "../_services/announce.service";
   styleUrls: ["./houses.component.scss"],
 })
 export class HousesComponent implements OnInit {
- 
-
   houses: any;
-  constructor(private announceService: announceService) {}
-  ngOnInit(): void {
-    this.getHouses()
-  }
-  getHouses(){
-    this.announceService.getHouses().subscribe(data=>{
-      this.houses = data 
-    })
-  }
-  
+  @Output() house: any;
 
+  constructor(
+    private announceService: announceService,
+    private route: Router
+  ) {}
+  ngOnInit(): void {
+    this.getHouses();
+  }
+  getHouses() {
+    this.announceService.getHouses().subscribe((data) => {
+      this.houses = data;
+    });
+  }
 }

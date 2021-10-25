@@ -39,25 +39,44 @@
         <p class="text-black font-normal text-2xl">Featured Ads</p>
       </div>
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-white bg-opacity-25 rounded-lg p-6 transform hover:scale-110 rounded overflow-hidden shadow-lg" *ngFor="let house of houses" >
-          <img
-            class="w-full max-h-60"
-            src= {{house.imageUrl}}
-            alt=""
-          />
+        <div
+          class="
+            bg-white bg-opacity-25
+            rounded-lg
+            p-6
+            transform
+            hover:scale-110
+            rounded
+            overflow-hidden
+            shadow-lg
+          "
+          *ngFor="let house of houses"
+        >
+          <img class="w-full max-h-60" src="{{ house.imageUrl }}" alt="" />
           <div>
-           
             <p>
-              {{house.productInfo}}
-          </p>
-            <p class="text-black leading-loose font-normal text-base">
-                       {{house.price}}
+              {{ house.productInfo }}
             </p>
-            <p>
-              Phone Number: {{house.phoneNumber}}
-           </p>
+            <p class="text-black leading-loose font-normal text-base">
+              {{ house.price }}
+            </p>
+            <p>Phone Number: {{ house.phoneNumber }}</p>
           </div>
-          <button class="p-2 pl-5 pr-5 bg-red-500 text-gray-100 text-lg rounded-lg focus:border-4 border-red-300" routerLink="/detail/{{house._id}}" >Details</button>
+          <button
+            class="
+              p-2
+              pl-5
+              pr-5
+              bg-red-500
+              text-gray-100 text-lg
+              rounded-lg
+              focus:border-4
+              border-red-300
+            "
+            routerLink="/detail/{{ house._id }}"
+          >
+            Details
+          </button>
         </div>
       </div>
     </section>

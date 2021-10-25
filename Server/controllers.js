@@ -6,7 +6,9 @@ const jwt = require("jsonwebtoken");
 
 // var Image = require ('../database-mongodb/Announce')
 const upload = require("../database-mongodb/utils/multer");
-const { constructorParametersDownlevelTransform } = require("@angular/compiler-cli");
+const {
+  constructorParametersDownlevelTransform,
+} = require("@angular/compiler-cli");
 // const cloudinary = require ('../database-mongodb/utils/cloudinary')
 // const path = require('path')
 
@@ -19,6 +21,13 @@ exports.createAnnounce = (req, res) => {
     .catch((err) => console.log(err));
 };
 
+exports.retrieveOne = (req, res) => {
+  let id = req.params;
+  let category = req.category;
+  Announce.findOne({ id: _id })
+    .then((result) => console.log(result))
+    .catch((err) => console.log(err));
+};
 
 exports.restieve = (req, res) => {
   var condition = req.params
@@ -95,7 +104,6 @@ exports.updateOne = (req, res) => {
 
 exports.createUser = async (req, res) => {
   try {
-    
     const { username, email, password } = req.body;
 
     if (!(email && password && username)) {
@@ -158,6 +166,3 @@ exports.loginUser = async (req, res) => {
     console.log(err);
   }
 };
-
-
-
