@@ -9,8 +9,19 @@ Router.get("/category/:category", Controller.restieve);
 Router.get("/recherche/:id", Controller.search);
 Router.post("/create", Controller.createAnnounce);
 
-Router.get("/:id", Controller.restieveOne);
-Router.delete("/:id", Controller.deleteOne);
-Router.put("/:id", Controller.updateOne);
+
+Router.get('/category/:category',Controller.restieve)
+Router.get('/recherche/:id',Controller.search)
+Router.post('/create',Controller.createAnnounce)
+Router.get('/UserAnnounces/:user',Controller.announceUser)
+
+
+
+Router.get('/:id',Controller.restieveOne)
+Router.delete('/:id',Controller.deleteOne)
+Router.put('/:id',Controller.updateOne)
+
+
+
 
 module.exports = Router;

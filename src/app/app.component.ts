@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
   showModeratorBoard = false;
   username?: string;
   title = "FreeMarket";
+  user = this.tokenStorageService.getUser();
+
   constructor(
     private router: Router,
     private tokenStorageService: TokenStorageService
@@ -30,10 +32,14 @@ export class AppComponent implements OnInit {
 
       this.username = user.username;
     }
+    if (this.isLoggedIn) {
+      window.location.reload();
+    }
+    console.log(this.username);
   }
 
   logout(): void {
     this.tokenStorageService.signOut();
-    this.router.navigate(["mainUI"]);
+    this.router.navigate(["mainUI"]).then(() => window.location.reload());
   }
 }

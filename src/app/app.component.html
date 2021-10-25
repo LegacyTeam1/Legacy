@@ -33,9 +33,15 @@
           <a *ngIf="!isLoggedIn" class="hover:text-gray-200" routerLink="/login"
             >Login</a
           >
+
           <a *ngIf="isLoggedIn" class="hover:text-gray-200" (click)="logout()"
             >Logout</a
           >
+        </li>
+        <li>
+          <a *ngIf="isLoggedIn" class="hover:text-gray-200">
+            LoggedIn as : {{ user.username }}
+          </a>
         </li>
         <li>
           <a

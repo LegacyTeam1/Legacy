@@ -23,8 +23,4 @@ export class HousesComponent implements OnInit {
       this.houses = data;
     });
   }
-  displayAd(id: Number) {
-    this.announceService.getAd(id).subscribe((data) => (this.house = data));
-    this.route.navigate(["display"]);
-  }
 }

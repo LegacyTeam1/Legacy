@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 var expressJWT = require("express-jwt");
+var multer = require('multer')
 
 const path = require("path");
 const ImageS = require("../database-mongodb/Image.js");

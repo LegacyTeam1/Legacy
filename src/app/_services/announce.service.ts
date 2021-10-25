@@ -25,9 +25,25 @@ export class announceService {
   }
 
   getPhones(): Observable<any> {
-    return this.http.get(AUTH_API + `category/phones`);
+      return this.http.get(AUTH_API+`category/phones`)
+    }
+
+  getUserAnnounces(user:string):Observable<any> {
+    return this.http.get(AUTH_API+`UserAnnounces/${user}`)
   }
-  getAd(id: Number): Observable<any> {
-    return this.http.get(AUTH_API + `${id}`)
+
+  deleteAnnounce(Announce:any):Observable<any> {
+    return this.http.delete(AUTH_API+`${Announce._id}`)
   }
+  
+
+  getOneAnnounce(id:any):Observable<any> {
+  
+    return this.http.get(AUTH_API+`${id}`)
+  }
+
+
+
+
+
 }
