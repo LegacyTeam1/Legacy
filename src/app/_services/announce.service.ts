@@ -38,6 +38,11 @@ export class announceService {
   }
   
 
+  getOneAnnounce(id:any):Observable<any> {
+  
+    return this.http.get(AUTH_API+`${id}`)
+  }
+
 
 
 
